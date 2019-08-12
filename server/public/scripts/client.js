@@ -11,6 +11,8 @@ function onReady() {
     console.log('DOM ready');
 
 $('#addJokeButton').on('click', addNewJoke);
+
+getJokes();
 }
 
 function addNewJoke (){
@@ -20,6 +22,10 @@ function addNewJoke (){
 
     postNewJoke();
 // console.log(jokes);
+
+$('#whoseJokeIn').val('');
+$('#questionIn').val('');
+$('#punchlineIn').val('');
 }
 
 function postNewJoke () {
